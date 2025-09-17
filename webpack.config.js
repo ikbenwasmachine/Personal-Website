@@ -17,6 +17,9 @@ module.exports = {
   'plugins': [
     new CompressionPlugin(),
     new LodashModuleReplacementPlugin,
-    new webpack.optimize.UglifyJsPlugin
-  ]
+    new webpack.ProvidePlugin({"React": "react"}),
+  ],
+  externals:{
+    'react': 'React'
+  },
 };
